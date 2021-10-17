@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Ejemplo de selectores avanzados</title>
+<style>
+  table, th, td{
+    border-style: solid;
+    border-color: black;
+    border-width: 1px;
+  }
+  th{
+    background-color: turquoise;
+    padding: 6px;
+    padding-left: 23px;
+  }
+
+  .yellow{
+    background-color: rgb(245, 245, 142);
+  }
+
+  td {
+    text-align: right;
+    padding: 2px;
+  }
+
+  tr:hover{
+    background-color: yellow;
+  }
+
+  .yellow:hover{
+    background-color: yellow;
+  }
+  .none th{
+    background-color: white;
+    padding: 6px;
+  }
+
+  img{
+    position:fixed;
+    left: 10px;
+    width: 20px;
+    margin-left: 2px;
+}
+
+</style>
+</head>
+<body>
+<table>
+  <tr class="none">
+    <th>Cambio</th>
+    <th>Compra</th>
+    <th>Venta</th>
+    <th>Máximo</th>
+    <th>Mínimo</th>
+  </tr>
+  <tr class="yellow">
+    <th class="euro"> <img src="euro.png" alt="">Euro/Dolar</th>
+    <td>1.25</td>
+    <td>1.25</td>
+    <td>1.25</td>
+    <td>1.24</td>
+  </tr>
+  <tr>
+    <th class="dolar"> <img src="dolar.png" alt="">Dolar/Yen</th>
+    <td>119.01</td>
+    <td>119.05</td>
+    <td>119.82</td>
+    <td>119.82</td>
+  </tr>
+  <tr class="yellow">
+    <th class="libra"> <img src="libra.png" alt="">Libra/Dolar</th>
+    <td>1.86</td>
+    <td>1.86</td>
+    <td>1.86</td>
+    <td>1.85</td>
+  </tr>
+  <tr>
+    <th class="yen"> <img src="yen.png" alt="">Yen/Euro</th>
+    <td>0.67</td>
+    <td>0.67</td>
+    <td>0.66</td>
+    <td>0.67</td>
+  </tr>
+</table>
+</body>
+</html>
