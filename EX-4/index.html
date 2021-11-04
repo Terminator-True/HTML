@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<title>Pseudoclasses</title>
+<meta charset="utf-8"/> 
+<style>
+    body{margin:0;padding:0;background-color: #222;}
+    h1{text-align: center;color:#aaa;}
+
+    div.luz>div.esfera{
+        position: absolute;
+        margin: 361px;
+        margin-top: 0px;
+
+        width: 200px;
+        height: 200px;
+        background: radial-gradient;
+        background-color: #0ac0bb;
+        border-radius: 50%;
+
+        box-shadow: inset -55px -55px 50px #122d2e;
+        z-index: 1;
+    }
+   
+    div.luz>div.sombra{
+        position: absolute;
+        margin: 361px;
+        margin-top: 87px;
+
+        width: 200px;
+        height: 25px;
+        background: radial-gradient;
+        background-color: #0ac0bb;
+        border-radius: 50%;
+
+        box-shadow: 100px 100px 12px black;
+        z-index: -1;
+    }
+
+</style>
+</head>
+<body>
+    <h1>Creació d'una esfera amb ombrejat (Pseudoclasses)</h1>
+    <div class="luz">
+        <div class="esfera" ></div>
+        <div class="sombra"></div>
+    </div>
+</body>
+</html>
