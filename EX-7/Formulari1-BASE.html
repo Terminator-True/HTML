@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style>
+      body{
+        margin: 10px;
+      
+      }
+      .form-style-1{
+        list-style:none;
+        margin: auto;
+        width: 50%;
+        border-color: #444444;
+      }
+      li{
+        margin:10px;
+      }
+      input{
+        padding:5px;
+      }
+      .required{
+        color: red;
+      }
+      input{
+        width: 50%; 
+      }
+      .field-divided{
+        width: 24%;
+      }
+      .field-select{
+        width: 50%;
+        padding: 10px;
+      }
+      #field5{
+          width: 50%;
+          height: 150px;
+      }
+      input[type=submit]{
+        width: 10%;
+        border: none;
+        padding:10px;
+        color: white;
+        background-color: #4B99AD;
+      }
+      input[type=submit]:active{
+        color: white;
+        background-color: #444444;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <ul class="form-style-1">
+        <li><label>Nom Complet<span class="required"> *</span></label><br>
+          <input name="field1" class="field-divided" placeholder="Nom" type="text">&nbsp;
+          <input name="field2" class="field-divided" placeholder="Cognom" type="text"></li>
+        <li> <label>Email <span class="required">*</span></label><br> <input name="field3"class="field-long" type="email"> </li>
+        <li> <label>Tema</label><br>
+          <select name="field4" class="field-select">
+            <option value="Consulta">Consulta</option>
+            <option value="Queixa">Queixa</option>
+            <option value="General">General</option>
+          </select>
+        </li>
+        <li> <label>Missatge <span class="required">*</span></label><br> <textarea
+
+name="field5" id="field5" class="field-long field-textarea"></textarea> </li>
+        <li> <input value="Enviar" type="submit"> </li>
+      </ul>
+    </form>
+  </body>
