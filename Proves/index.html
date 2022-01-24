@@ -1,48 +1,13 @@
-<!DOCTYPE html>
-<html lang="ES">
 <head>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
-    rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
-    crossorigin="anonymous">
-    <title>Proves</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
-<body>
-    <img class="p-2 float-start" src="https://c.tenor.com/zbX4GFMt2PEAAAAC/monkey-pov.gif" alt="">
-    <img class="img-thumbnail p-5 rounded float-end " src="https://c.tenor.com/LPPfCi5X608AAAAd/monki-flip.gif" alt="">
+<h1 class="blink">QUIERES CASARTE CONMIGO</h1>
 
-    <table class="table">
-        <thead>
-          <tr class="table-secondary rounded col-2" >
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <figure class="figure p-5">
-        <img class="figure-img img-fluid rounded" src="https://m.media-amazon.com/images/G/30/gc/designs/livepreview/amazon_squidink_noto_email_v2016_es-main._CB462075794_.png" alt="">
-        <figcaption class="figure-caption text-end">A caption for the above image.</figcaption>
-      </figure>
-</body>
-</html>
+<script>
+  function blink(){
+    var color="#FF00FF,#FF00CC,#FF0099,#FA9066,#FF0033,#FF0000,#FF5733,#83FF33,#EB86FF,#86FFE5";
+    color=color.split(",");
+    $(".blink").css('color',color[parseInt(Math.random()*color.length)]);
+}
+setInterval("blink()",200);
+</script>

@@ -1,0 +1,50 @@
+<style>
+    table,tr,td{
+        padding: 15px;
+        margin: 15px;
+
+    }
+    td{
+        width: 100px;
+    }
+    #contador{
+        margin-left: 200px;
+    }
+</style>
+<body>
+    <div id="tabla"></div>
+    <div id="contador"></div>
+    <script>
+        i=0
+        j=15
+        function randomButton(n=null) {
+            if (j==15) {
+                if (n!=null) {
+                    n.remove()   
+                }
+                j=0
+                var num1 = Math.floor(Math.random()*6).toString()
+                var num2 = Math.floor(Math.random()*6).toString()
+                document.getElementById(num1+num2).innerHTML="<button id=n"+num1+num2+" onclick='randomButton(n"+num1+num2+")'>Pulsa</button>"    
+            }
+            document.getElementById("contador").innerHTML="<h1>"+i+"</h1>"
+            j++   
+            i++ 
+
+
+        }
+        var tabla = "<table>"
+        for (let i = 0; i < 6; i++) {
+            tabla = tabla+"<tr>"
+            for (let j = 0; j < 6; j++) {
+                tabla = tabla+"<td id="+i.toString()+j.toString()+"></td>"
+            }
+            tabla = tabla+"</tr>"
+        }
+        tabla = tabla+"</table>"
+        document.getElementById("tabla").innerHTML=tabla;
+        //Coloca aleatoriament el botó al carregar
+        randomButton()
+
+    </script>
+</body>

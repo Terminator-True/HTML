@@ -2279,6 +2279,8 @@ input, select, textarea {
 		.image img {
 			border-radius: 6px;
 			display: block;
+			height: 250px;
+
 		}
 
 		.image.left, .image.right {
@@ -2943,7 +2945,7 @@ input, select, textarea {
 				}
 
 		.wrapper.style1 {
-			background-color: #4696e5;
+			background-color: #474849;
 			color: #d1e5f9;
 		}
 
