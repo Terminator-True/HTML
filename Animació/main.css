@@ -1,0 +1,54 @@
+#animation{
+    height: 350px;
+    width: 700px;
+    background: url("Fondo.jpg");
+    animation: movebg 7s linear infinite;
+    
+}
+@keyframes movebg {
+    0% { background-position:550px }
+    50% { background-position:255px }
+    100% { background-position:255px }
+  }
+#ciborg_correr{
+    position:absolute;
+    height: 60px;
+    width: 40px;
+    transform: translate(340px,285px);
+    background: url("3\ Cyborg/Cyborg_run.png") repeat-x;
+   /* background-position: 47.5px;*/
+    animation:run 1s steps(6, end) infinite;
+
+}
+@keyframes run {
+    0% { background-position: 0px; }
+    100% { background-position: -285px;}
+  }
+
+
+#ciborg_pega{
+    position:absolute;
+    height: 60px;
+    width: 40px;
+    transform: translate(340px,285px);
+   /* background-position: 47.5px;*/
+    animation:pega 1s steps(6, end);
+    animation-delay: 4s;
+}
+@keyframes pega {
+    0% {background: url("3\ Cyborg/Cyborg_attack3.png") repeat-x;}
+    100% { background-position: -285px; }
+  }
+
+#Enemy{
+    height: 165px;
+    width: 130px;
+    transform: rotate(90deg);
+    transform:translate(-500px,0px);
+    animation: ataca 10s;
+    animation-delay: 1s;
+}
+@keyframes ataca {
+    0% {background: url("Enemy.png");}
+    25% { transform:translate(500px, 100px) }
+}
