@@ -7,17 +7,17 @@
         <title>Document</title>
     
         <style>
-            .agrandar{
+            .obj0{
                 margin-bottom: 10px;
                 width: 100px;
                 height: 100px;
                 background-color: red;
-                animation-name: agrandar;
+                animation-name: large;
                 animation-duration: 10s;
                 animation-iteration-count: infinite;
                 animation-delay: 3s;
             }
-            @keyframes agrandar {
+            @keyframes large {
                 0%    {background-color:red; width: 100px;}
                 25%  {background-color:yellow; width: 400px;}
                 25%  {background-color:red; width: 100px;}
@@ -27,16 +27,16 @@
 
             }
     
-            .arcoirirs{
+            .obj1{
                 width: 100px;
                 height: 100px;
                 background-color: red;
                 position: relative;
-                animation-name: example;
+                animation-name: colours;
                 animation-duration: 10s;
                 animation-iteration-count: infinite;
             }
-            @keyframes example {
+            @keyframes colours {
                 0%   {background-color:red; left:0px; top:0px;}
                 25%   {background-color:green}
                 50%  {background-color:blue; left:300px; top:0px;}
@@ -46,7 +46,7 @@
         </style>
     </head>
     <body>
-        <div class="agrandar"></div>
-        <div class="arcoirirs"></div>
+        <div class="obj0"></div>
+        <div class="obj1"></div>
     </body>
     </html>
