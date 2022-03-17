@@ -1,54 +1,110 @@
 #animation{
     height: 350px;
     width: 700px;
-    background: url("Fondo.jpg");
-    animation: movebg 7s linear infinite;
-    
+    background: url("Fondo.jpg") repeat-x;
+    animation: movebg 3s linear infinite;
+    animation-iteration-count: 2.7;
+
 }
 @keyframes movebg {
     0% { background-position:550px }
-    50% { background-position:255px }
-    100% { background-position:255px }
+    100% { background-position:-550px }
   }
 #ciborg_correr{
     position:absolute;
+    visibility: hidden;
     height: 60px;
     width: 40px;
     transform: translate(340px,285px);
     background: url("3\ Cyborg/Cyborg_run.png") repeat-x;
    /* background-position: 47.5px;*/
-    animation:run 1s steps(6, end) infinite;
-
+    animation:run 0.5s steps(6, end);
+    animation-iteration-count: 8;
 }
 @keyframes run {
-    0% { background-position: 0px; }
-    100% { background-position: -285px;}
+    0% { background-position: 0px;visibility:visible; }
+    100% { background-position: -285px;visibility:visible;}
   }
 
-
-#ciborg_pega{
+#ciborg_esquiva{
     position:absolute;
+    visibility: hidden;
     height: 60px;
     width: 40px;
     transform: translate(340px,285px);
+    background: url("3\ Cyborg/Cyborg_doublejump.png") repeat-x;
    /* background-position: 47.5px;*/
-    animation:pega 1s steps(6, end);
+    animation:esquivar 0.5s steps(6, end);
+    animation-iteration-count: 8;
     animation-delay: 4s;
 }
-@keyframes pega {
-    0% {background: url("3\ Cyborg/Cyborg_attack3.png") repeat-x;}
-    100% { background-position: -285px; }
+
+@keyframes esquivar {
+    0% { background-position: 0px;visibility:visible; }
+    100% { background-position: -285px;visibility:visible;}
   }
 
-#Enemy{
-    height: 165px;
-    width: 130px;
-    transform: rotate(90deg);
-    transform:translate(-500px,0px);
-    animation: ataca 10s;
-    animation-delay: 1s;
+#ciborg_muere{
+    position:absolute;
+    visibility: hidden;
+    height: 60px;
+    width: 40px;
+    transform: translate(340px,285px);
+    background: url("3\ Cyborg/Cyborg_death.png") repeat-x;
+   /* background-position: 47.5px;*/
+    animation:muerte 0.5s steps(6, end);
+    animation-iteration-count: 1;
+    animation-delay: 8s;
 }
+
+@keyframes muerte {
+    0% { background-position: 0px;visibility:visible; }
+    100% { background-position: -285px;visibility:visible;}
+  }
+
+#enemigo_correr{
+    position:absolute;
+    visibility: hidden;
+    height: 60px;
+    width: 40px;
+    transform: translate(200px,285px);
+    background: url("2_Punk\Punk_run.png") repeat-x;
+   /* background-position: 47.5px;*/
+    animation:enemy_run 0.5s steps(6, end);
+    animation-iteration-count: 8;
+}
+@keyframes enemy_run {
+    0% { background-position: 0px;visibility:visible;}
+    100% { background-position: -285px;visibility:visible;}
+  }
+
+#enemigo_ataca{
+    position:absolute;
+    visibility: hidden;
+    height: 60px;
+    width: 40px;
+    transform: translate(300px,285px);
+    background: url("2_Punk\Punk_run.png") repeat-x;
+   /* background-position: 47.5px;*/
+    animation:ataca 0.5s steps(6, end);
+    animation-iteration-count: 8;
+    animation-delay: 4s;
+}
+
 @keyframes ataca {
-    0% {background: url("Enemy.png");}
-    25% { transform:translate(500px, 100px) }
+    0% { background-position: 0px;visibility:visible; }
+    100% { background-position: -285px;visibility:visible;}
+  }
+
+#disparo{
+    position:absolute;
+    width: 50px;
+    visibility: hidden;
+    animation: disparo 2s;
+    animation-delay: 4s;
+
+}
+@keyframes disparo {
+    from { transform: translate(345px,-100px);visibility:visible;}
+    to {transform: translate(345px,125px);visibility:visible;}
 }
