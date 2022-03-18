@@ -4,17 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="main.css">
     <title></title>
 </head>
 <body>
-<div id="animation">
+    <h1 id="titulo"style="margin:auto;">CiborgFlip</h1>
+    <button id="play" > <img src="boton-de-play.png" style="width: 30px;" alt=""> </button>
+<div id="animation" style="display: none;">
+    <img id="voz" src="Volumen.png" alt="">
+    <div id="ciborg_pana"></div>
+    <div id="enemigo_pana"></div>
     <div id="ciborg_correr"></div>
     <div id="enemigo_correr"></div>
     <div id="ciborg_esquiva"></div>
     <div id="ciborg_muere"></div>
     <div id="enemigo_ataca"></div>
-    <div ><img id="disparo" src="martillo_bien.png" alt=""></div>
-</div>
+    <div id="enemigo_final"></div>
+<script>
+    $(document).ready(function() {
+        $('#play').click(function () {
+            $("#play").css("display","none")
+            $("#titulo").css("display","none")
+            $('#animation').css("display","block")
+            //$('#animation').load('index.html');
+            var sonido = new Audio("fondo.mp3");
+            sonido.play();
+        })    
+});
+</script>
 </body>
 </html>
