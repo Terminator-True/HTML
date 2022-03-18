@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bola del mon</title>
+    <style>
+        #bola{
+            height: 600px;
+            width: 600px;
+            background-image: url("mon.png");
+            border-radius: 100%;
+            animation: moviment 20s infinite;
+            box-shadow: -10px -5px 0px 1px inset rgba(48, 48, 48, 0.289) ;
+        }
+        @keyframes moviment {
+            from {background-position: 0;}
+            to {background-position: -500px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="bola"></div>
+</body>
+</html>
