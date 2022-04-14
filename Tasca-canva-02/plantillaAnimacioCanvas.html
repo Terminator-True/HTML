@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Animacions del Canvas</title>
+    <style>
+        canvas{
+            border:1px solid #000000;
+        }
+    </style>
+    <script>
+        var c; // Referencia al canvas
+        var ctx; // Context 2D
+        var cw;  // Amplada canvas
+        var ch ; // Alçada canvas
+        var parado; // Boolea indicador de moviment
+        var Id; // Id animacio
+        var rotacio; // Angle animacio
+
+        const rad = Math.PI/180; // Conversio radians
+        const angulo = 5; // Increment rotacio
+        
+        function inicialitza(){
+            c = document.getElementById("c")
+            ctx = c.getContext("2d")    
+            cw = 600
+            ch = 400
+            rotacio = 25
+    
+	    // Dibuixar primer rectangle
+            // Translacio origen coordenades a la meitat del canvas
+            ctx.translate(300,200);
+            // A partir del punt de translacio anterior, retrocedeix 75p
+            // esquerra i a dalt i dibuixa rect de 150x150px
+            ctx.rect(300-75,200-75,150,150)
+            ctx.stroke()
+
+            parado=true
+
+            // Programem event onClick del canvas
+            c.addEventListener("click", decisio); 
+        }
+    
+        function decisio(){
+            if(parado==true){
+		// Arranquem animacio i canvi text boto
+                document.getElementById("boto").innerText="Aturar" 
+                girar()
+                parado=false    
+            }else{
+		// Aturem animacio i canvi text boto
+            document.getElementById("boto").innerText="Arrancar"
+            parado=true  
+            }
+
+        }        
+        
+        function girar(){
+            // Borra rect de la posicio -cw/2,-ch/2 de tamany cw,ch,
+            // recordem que esta trasladat...
+	    // Tornem a repintar rectangle amb orientacio nova
+
+            rotacio+=angulo
+
+
+ 	    // Reprogramem animacio
+	    
+        }
+         
+        function stopAnimacio() {
+            if (Id) {
+                window.cancelAnimationFrame(Id);
+            }
+            parat=true
+        }
+        
+        function reiniciar(){
+	    // Aturem i repintem en posicio i angle inicial
+            rotacio=0;
+
+	    // Reiniciem moviment
+
+            decisio();
+        }
+        
+    </script>
+</head>
+<body onLoad="inicialitza();">
+    <div>
+        <canvas id="c" width="500" height="300">Canvas no suportat... </canvas> 
+    </div>
+    
+    <div>
+        <p>
+           <button id="boto" onClick="decisio();">Arrancar</button>
+           <button id="boto2" onClick="reiniciar();">Reiniciar</button>
+        </p> 
+    </div>
+
+</body>
+</html>
